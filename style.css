@@ -1,0 +1,40 @@
+.container{
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.list-container{
+    text-align : center;
+}
+
+
+html { 
+    background: url("bg2.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+}
+
+h1,.dynamic-head,h4{
+    color : greenyellow; 
+    font-family: 'New Tegomin', serif;
+}
+
+.list-group-item{
+    color: white;
+    font-family: 'Orelega One', cursive;
+}
+
+.bottom-quote{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+.contact{
+    color: white;
+    font-family: 'New Tegomin', serif;
+}
