@@ -22,11 +22,21 @@ function generateList(stateName,deltaRecovered){
 }
 
 var dynamicHead = (deltaRecovered) => {
-    const head = document.querySelector(".dynamic-head");
-    head.innerHTML = `${deltaRecovered} Indians beat Coronavirus !`
 
-    const visHead =  document.querySelector(".vis");
-    visHead.innerHTML = "National Recovery Stats";
+    if(deltaRecovered==0){
+        const head = document.querySelector(".dynamic-head");
+        head.innerHTML = `Stats Unavailable for the moment, because the MoHFW haven't released them for today`;
+
+        const visHead =  document.querySelector(".vis");
+        visHead.innerHTML = "Please retry again in a few hours";
+    }
+    else{
+        const head = document.querySelector(".dynamic-head");
+        head.innerHTML = `${deltaRecovered} Indians beat Coronavirus !`;
+
+        const visHead =  document.querySelector(".vis");
+        visHead.innerHTML = "National Recovery Stats";
+    }
 }
 
 var main = async () =>{
