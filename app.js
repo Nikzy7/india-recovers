@@ -39,8 +39,51 @@ var dynamicHead = (deltaRecovered) => {
     }
 }
 
+var generateGraph = (timeSeries) => {
+    const chart = document.getElementById("recovery-graph");
+
+    labelsArray = [];
+    dataVals = [];
+
+    for(dayNum in timeSeries){
+        var day = timeSeries[dayNum];
+
+        labelsArray.push(day['date']);
+        dataVals.push(parseInt(day['dailyrecovered'],10));
+    }
+
+    let lineChart = new Chart(chart, {
+        type: 'line',
+        data: {
+            labels : labelsArray,
+            datasets : [
+                {
+                    label:"Recovered",
+                    data : dataVals,
+                    fill: true,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }
+            ]
+        },
+        options: {
+            maintainAspectRatio: true,
+            responsive:true,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+}
+
 var main = async () =>{
     var getRequest = await dataGet();
+
+    generateGraph(getRequest['cases_time_series'])
     
     var allData = getRequest['statewise'];
 

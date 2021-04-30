@@ -39,3 +39,8 @@ h1,.dynamic-head,h4{
     color: white;
     font-family: 'New Tegomin', serif;
 }
+
+.graph-container{
+    background-color: white;
+    border-radius: 25px;
+}
