@@ -42,9 +42,11 @@ h1,.dynamic-head,h4{
 	font-family: 'New Tegomin', serif;
 	font-weight: bold;
 }
+
 .heffect:hover {
 		font-size: 150%;
 	}
+	
 .contact{
     color: white;
     font-family: 'New Tegomin', serif;
