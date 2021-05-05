@@ -43,4 +43,19 @@ h1,.dynamic-head,h4{
 .graph-container{
     background-color: white;
     border-radius: 25px;
+    margin-left: 200px;
+	margin-right: 200px;
+}
+@media (max-width:990px) {
+  .graph-container {
+    display:flex;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (max-width:600px) {
+    .graph-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
