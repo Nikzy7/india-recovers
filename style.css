@@ -1,13 +1,28 @@
 .container{
     text-align: center;
+    font-size: x-large;
 }
 
 ul{
-    list-style-type: none;
+    justify-content: space-between;
 }
 
 .list-container{
     text-align : center;
+    margin-top: 40px;
+    overflow:scroll;
+    scroll-behavior: smooth;
+    color: #6a5d5d;
+    background-color: rgb(194, 215, 247);
+    height: 400px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-style: groove;
+    border-top-left-radius: 3% ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.list-container li:nth-of-type(odd) {
+    background-color: rgb(171, 247, 184)
 }
 
 
@@ -17,6 +32,7 @@ html {
     -moz-background-size: cover; 
     -o-background-size: cover; 
     background-size: cover; 
+    scroll-behavior: smooth;
 }
 
 h1,.dynamic-head,h4{
@@ -25,9 +41,9 @@ h1,.dynamic-head,h4{
 }
 
 .list-group-item{
-    color: white;
+    color: rgb(44, 44, 44);
     font-family: 'Orelega One', cursive;
-    font-size: x-large;
+    text-align: justify;
 }
 
 .bottom-quote{
@@ -54,6 +70,31 @@ h1,.dynamic-head,h4{
 }
 
 .graph-container{
-    background-color: white;
+    background-color: rgb(228, 239, 255);
     border-radius: 25px;
+	margin-left: 200px;
+	margin-right: 200px;
+    padding: 10px;
+	
 }
+@media (max-width:990px) {
+  .graph-container {
+    display:flex;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (max-width:600px) {
+    .graph-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width:990px) {
+    .list-container {
+      display:flex;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
